@@ -45,8 +45,11 @@ html {
 
 .header {
   text-align: center;
-  padding-top: 100px;
   margin: 0 25%;
+}
+
+.contact-content{
+  padding: 7% 0 7% 0;
 }
 
 .header h1 {
@@ -62,8 +65,7 @@ html {
 }
 
 .form{
-  margin: 0 25%;
-  padding-bottom: 80px;
+  margin: 0 30%;
 }
 
 input {
