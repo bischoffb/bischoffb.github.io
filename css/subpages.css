@@ -69,7 +69,8 @@ html {
 }
 
 #aboutSectionLove {
-  width: 45%;
+  width: 50%;
+  padding-right: 20px;
 }
 
 h3{
