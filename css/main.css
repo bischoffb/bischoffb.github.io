@@ -1,0 +1,483 @@
+/* ####################################################################################################################### */
+
+/* Main Styling CSS */
+
+/* ####################################################################################################################### */
+
+body {
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+  transition: 1s opacity;
+}
+body.fade-out {
+  opacity: 0;
+  transition: none;
+}
+
+html {
+  background-color: #67c293
+}
+
+.mobile-version{
+  display: none;
+}
+
+/* ####################################################################################################################### */
+
+/* Hero Background Image / Bottom Navigation Hover Buttons */
+
+/* ####################################################################################################################### */
+
+section {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(to right, 
+  #02b1a3, 
+  #67c293);
+}
+
+.bottom-nav {
+  border-top: 1px solid white;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.bottom-nav-container{
+  width: 100%;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 1;
+}
+
+.bottom-nav li {
+  list-style: none;
+  width: 20%;
+}
+
+.bottom-nav li .bottom-nav-link {
+  display: block;
+  text-align: center;
+  line-height: 100px;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 11pt;
+}
+
+.bottom-nav li .bottom-nav-link:hover {
+  background: #fff;
+  color: #00e096;
+}
+
+section #hero-image{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transition: 0.5s;
+  opacity: 0;
+  z-index: -1;
+}
+
+h2,
+p {
+  margin: 0 auto;
+  color: white;
+}
+
+h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 60px;
+}
+
+p{
+  padding-top: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.hero-text{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hero-text-box{
+  max-width: 35%;
+  padding-left: 3em;
+  padding-bottom: 40px;
+}
+
+.bottom-nav li:nth-child(0) .bottom-nav-link {
+  opacity: 1;
+}
+
+.bottom-nav li:nth-child(1) .bottom-nav-link + #hero-image{
+  opacity: 1;
+}
+
+.bottom-nav li .bottom-nav-link:hover + #hero-image {
+  opacity: 1;
+  animation: animate 30s linear forwards;
+}
+
+.invites-hero-image {
+  opacity: 1;
+}
+
+/* ######################################################################################### */
+
+/* Main Navigation - Menu Overlay Styling */
+
+/* ####################################################################################################################### */
+
+/* Top Navigation */
+.main-navigation{
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+img {
+  height: 50px;
+  width: auto;
+  padding-top: 25px;
+  z-index: 1;
+  opacity: 1;
+}
+
+/* Menu Overlay Container */
+.nav-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  margin: 0 auto;
+}
+.nav-container p {
+  font-size: 20px;
+}
+.nav-container > .navLink {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  overflow: hidden;
+  top: 5px;
+}
+.overlay-menu .navLink:after {
+  content: '';
+  position: absolute;
+  background: white;
+  height: 2px;
+  width: 0%;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 0;
+  transition: .35s ease;
+}
+.nav-container .navLink:hover:after, .nav-container .navLink:focus:after, .nav-container .navLink:active:after {
+  width: 100%;
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ####################################################################################################################### */
+
+/* Overlay Button */
+
+/* ####################################################################################################################### */
+
+/* Overlay Menu Button */
+.button_container {
+  position: fixed;
+  top: 5%;
+  right: 2%;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease;
+}
+.button_container:hover {
+  opacity: .7;
+}
+.button_container.active .top {
+  transform: translateY(11px) translateX(0) rotate(45deg);
+  background: white;
+}
+.button_container.active .middle {
+  opacity: 0;
+  background: white;
+}
+.button_container.active .bottom {
+  transform: translateY(-11px) translateX(0) rotate(-45deg);
+  background: white;
+}
+.button_container span {
+  background: white;
+  border: none;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .35s ease;
+  cursor: pointer;
+}
+.button_container span:nth-of-type(2) {
+  top: 11px;
+}
+.button_container span:nth-of-type(3) {
+  top: 22px;
+}
+
+/* ####################################################################################################################### */
+
+/* Overlay Menu Effect */
+
+/* ####################################################################################################################### */
+
+/* Overlay Menu Styling */
+.overlay {
+  position: fixed;
+  background: #00e096;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+}
+.overlay.open {
+  opacity: .9;
+  visibility: visible;
+  height: 100%;
+  z-index: 1;
+}
+.overlay.open li {
+  animation: fadeInRight .5s ease forwards;
+  animation-delay: .35s;
+}
+.overlay.open li:nth-of-type(2) {
+  animation-delay: .4s;
+}
+.overlay.open li:nth-of-type(3) {
+  animation-delay: .45s;
+}
+.overlay.open li:nth-of-type(4) {
+  animation-delay: .50s;
+}
+.overlay.open li:nth-of-type(5) {
+  animation-delay: .55s;
+}
+.overlay nav {
+  position: relative;
+  height: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+.overlay .nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+.overlay .nav-menu li {
+  display: block;
+  height: 25%;
+  height: calc(100% / 5);
+  min-height: 50px;
+  position: relative;
+  opacity: 0;
+}
+.overlay .nav-menu li a {
+  display: block;
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+  overflow: hidden;
+}
+.overlay .nav-menu li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
+  width: 25%;
+}
+.overlay .nav-menu li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 2px;
+  transition: .35s;
+}
+
+/* ####################################################################################################################### */
+
+/* Animations */
+  
+/* ####################################################################################################################### */
+
+  /* Overlay Menu Text Animation */
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 20%;
+    }
+    100% {
+      opacity: 1;
+      left: 0;
+    }
+  }
+
+  /* Background Image Zoom In Animation */
+  @keyframes animate{
+    0%
+    {
+      transform: scale(1);
+    }
+    100%
+    {
+      transform: scale(2);
+    }
+  }
+
+/* ####################################################################################################################### */
+
+/* Mobile Resizing */
+
+/* ####################################################################################################################### */
+
+@media only screen and (max-width: 480px){
+  
+  .bottom-nav{
+    display: none;
+  }
+
+  section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    display: block;
+  }
+
+  .mobile-version{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: linear-gradient(to right, 
+    #02b1a3, 
+    #67c293);
+  }
+
+  .hero-slide {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid white;
+    padding: 0;
+  }
+
+  .hero-slide:nth-child(1) {
+    padding-top: 150px;
+  }
+
+  .button_container{
+    top: 6%;
+  }
+
+  .main-navigation{
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to right, 
+    #02b1a3, 
+    #67c293);
+    border-bottom: 1px solid white;
+  }
+
+  #itsabreeze-logo{
+    position: fixed;
+    height: 50px;
+    width: auto;
+    padding: 0 30% 0 30%;
+    padding-top: 25px;
+    opacity: 1;
+  }
+
+  img {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    z-index: 0;
+  }
+
+  .text-box{
+    display: block;
+    z-index: 1;
+    padding: 20px;
+  }
+
+  h2,
+  p {
+    margin: 0 auto;
+    color: white;
+  }
+
+  h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 40px;
+  }
+
+  p{
+    padding-top: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+  }
+
+}

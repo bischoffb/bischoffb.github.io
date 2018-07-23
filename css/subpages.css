@@ -1,0 +1,536 @@
+/* CSS for Subpages */
+
+/* ####################################################################################################################### */
+
+/* Main Styling for Main Area */
+
+/* ####################################################################################################################### */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: white;
+  color: #00e096;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  opacity: 1;
+  transition: 1s opacity;
+}
+body.fade-out {
+  opacity: 0;
+  transition: none;
+}
+
+html {
+  background-color: #67c293;
+}
+
+.main-container{
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-content{
+  padding: 20px 20px 45px 20px;
+}
+
+/* ####################################################################################################################### */
+
+/* SubPages Hero Styling */
+
+/* ####################################################################################################################### */
+
+.hero{
+  background-image: url(../images/hero_image_subpages.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100px;
+  z-index: -2;
+}
+
+/* ####################################################################################################################### */
+
+/* About Page */
+
+/* ####################################################################################################################### */
+
+/* Top About Section */
+.about-us{
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+}
+
+.aboutSection {
+  padding: 10px;
+}
+
+#aboutSectionLove {
+  width: 45%;
+}
+
+h3{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+  font-size: 24pt;
+  color: #00e096;
+  padding: 0 0 10px 0;
+  font-weight: 200;
+}
+
+p2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  margin: 0 auto;
+  color: rgb(104, 104, 104);
+  font-size: 11pt;
+  line-height: 1.7em;
+}
+
+.main-image{
+  width: 700px;
+  height: 400px;
+  background-image: url(../images/aboutus.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Divider Line */
+hr { 
+  display: block;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-top: 1px solid rgb(210, 210, 210);
+}
+
+/* Products Section */
+.list-container{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.list-text{
+  width: 35%;
+  border-right: 1px solid light gray;
+}
+
+.about-list{
+  margin: 0;
+}
+
+.about-list ul li p2{
+  list-style-position: outside;
+}
+
+#list-container-bottom{
+  margin-top: 20px;
+}
+
+h4{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+  font-size: 16pt;
+  color: #00e096;
+  padding: 0 0 10px 0;
+  font-weight: 200;
+}
+
+/* ####################################################################################################################### */
+
+/* FAQ PAGE STYLING */
+
+/* ####################################################################################################################### */
+  
+/* Styles for Accordion */
+.topSection{
+  padding: 5%;
+}
+
+.faqSection:hover{
+  background-color: #dffff4;
+}
+
+.faqSection:last-child {
+  border-bottom: 1px solid #dddddd;
+}
+  .faqSection .faq-title {
+    position: relative;
+    display: block;
+    border-top: 1px solid #dddddd;
+    margin-bottom: 0;
+  }
+  .faqSection .faq-title h3 {
+    font-size: 20px;
+    margin: 0;
+    line-height: 1;
+    cursor: pointer;
+    font-weight: 200;
+  }
+  .faqSection .faq-inner {
+    padding: 7px 25px 10px 25px;
+    display: none;
+    margin: -7px 0 0px;
+  }
+  .faqSection .faq-inner div {
+    max-width: 100%;
+  }
+  .faqSection .faq-title .title-name {
+    display: block;
+    padding: 25px 25px 14px;
+  }
+  .faqSection .faq-title a i {
+    font-size: 22px;
+    margin-right: 5px;
+  }
+  .faqSection .faq-title i {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+    margin: 20px;
+    right: 0;
+  }
+  .faqSection:hover{
+    background-color: #ebfff8;
+  }
+
+/* ####################################################################################################################### */
+
+/* Main Navigation - Menu Overlay Styling */
+
+/* ####################################################################################################################### */
+
+/* Top Navigation */
+.main-navigation{
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+img {
+  height: 50px;
+  width: auto;
+  padding-top: 25px;
+  z-index: 2;
+  opacity: 1;
+}
+
+/* Menu Overlay Container */
+.nav-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  margin: 0 auto;
+  }
+.nav-container p {
+  font-size: 20px;
+}
+.nav-container > a {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  overflow: hidden;
+  top: 5px;
+}
+.overlay-menu a:after {
+  content: '';
+  position: absolute;
+  background: white;
+  height: 2px;
+  width: 0%;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 0;
+  transition: .35s ease;
+}
+.nav-container a:hover:after, .nav-container a:focus:after, .nav-container a:active:after {
+  width: 100%;
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ####################################################################################################################### */
+
+/* Overlay Menu Button */
+
+/* ####################################################################################################################### */
+
+.button_container {
+  position: absolute;
+  top: 35%;
+  right: 2%;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease;
+}
+.button_container:hover {
+  opacity: .7;
+}
+.button_container.active .top {
+  transform: translateY(11px) translateX(0) rotate(45deg);
+  background: white;
+}
+.button_container.active .middle {
+  opacity: 0;
+  background: white;
+}
+.button_container.active .bottom {
+  transform: translateY(-11px) translateX(0) rotate(-45deg);
+  background: white;
+}
+.button_container span {
+  background: white;
+  border: none;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .35s ease;
+  cursor: pointer;
+}
+.button_container span:nth-of-type(2) {
+  top: 11px;
+}
+.button_container span:nth-of-type(3) {
+  top: 22px;
+}
+
+/* ####################################################################################################################### */
+
+/* Overlay Menu Styling */
+
+/* ####################################################################################################################### */
+
+.overlay {
+  position: fixed;
+  background: #00e096;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+}
+.overlay.open {
+  opacity: .9;
+  visibility: visible;
+  height: 100%;
+  z-index: 1;
+}
+.overlay.open li {
+  animation: fadeInRight .5s ease forwards;
+  animation-delay: .35s;
+}
+.overlay.open li:nth-of-type(2) {
+  animation-delay: .4s;
+}
+.overlay.open li:nth-of-type(3) {
+  animation-delay: .45s;
+}
+.overlay.open li:nth-of-type(4) {
+  animation-delay: .50s;
+}
+.overlay.open li:nth-of-type(5) {
+  animation-delay: .55s;
+}
+.overlay nav {
+  position: relative;
+  height: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+.overlay .nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+.overlay .nav-menu li {
+  display: block;
+  height: 25%;
+  height: calc(100% / 5);
+  min-height: 50px;
+  position: relative;
+  opacity: 0;
+}
+.overlay .nav-menu li a {
+  display: block;
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+  overflow: hidden;
+}
+.overlay .nav-menu li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
+  width: 25%;
+}
+.overlay .nav-menu li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 2px;
+  transition: .35s;
+}
+
+/* ####################################################################################################################### */
+
+/* Footer */
+
+/* ####################################################################################################################### */
+
+.footer-container{
+  background-color: rgb(238, 238, 238);
+  height: 150px;
+  width: 100%;
+  border-top: 1px solid rgb(210, 210, 210);
+}
+
+.footer-content{
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.copyright{
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  font-size: 12px;
+}
+
+.footer-content ul{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  display: flex;
+}
+
+.footer-content ul li{
+  position: relative;
+  list-style: none;
+  width: 45px;
+  height: 45px;
+  margin: 0 5px;
+  border: 2px solid #00e096;
+  box-sizing: border-box;
+  border-radius: 50%;
+  transition: .5s;
+  background-color: rgb(238, 238, 238);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.footer-content ul li:hover{
+  background-color: #00e096;
+}
+
+.footer-content ul li .fab {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 22px;
+  transition: .5s;
+}
+
+.footer-content ul li .fab:nth-child(1) {
+  left: -50%;
+  opacity: 0;
+}
+
+.footer-content ul li:hover .fab:nth-child(1) {
+  left: 50%;
+  opacity: 1;
+  color: white;
+}
+
+.footer-content ul li:hover .fab:nth-child(2) {
+  left: 150%;
+  opacity: 0;
+}
+
+/* ####################################################################################################################### */
+
+/* Animations */
+
+/* ####################################################################################################################### */
+
+  /* Overlay Menu Text Animation */
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 20%;
+    }
+    100% {
+      opacity: 1;
+      left: 0;
+    }
+  }
+
+/* ####################################################################################################################### */
+
+/* About Page Responsive Settings */
+
+/* ####################################################################################################################### */
+
+  /* Mobile Resizing */
+  @media only screen and (max-width: 768px){
+    .about-us{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #aboutSectionLove {
+      width: 100%;
+    }
+    .main-image{
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 668px){
+    .list-container{
+      display: flex;
+      flex-direction: column;
+    }
+    h4{
+      padding-top: 10px;
+    }
+    .list-text{
+      width: 100%;
+    }
+    
+    #aboutSectionLove {
+      width: 100%;
+    }
+  }
